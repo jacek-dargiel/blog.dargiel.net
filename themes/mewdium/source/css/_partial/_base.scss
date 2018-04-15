@@ -1,0 +1,63 @@
+html {
+  font-family: $font-stack-body;
+  line-height: 1.41;
+  color: $text-color;
+  font-size: 16px;
+
+  @media (min-width: 1360px) {
+    $map: (1360px: 16px, 1920px: 21px);
+    font-size: linear-interpolation($map);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-stack-header;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  line-height: 1.22;
+
+  &>a {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $color-gray-dark;
+    }
+  }
+}
+
+a{
+  text-decoration: none;
+  
+  &:link {
+    color: $link-color;
+  }
+  &:visited {
+    color: $link-color-visited;
+  }
+  &:hover {
+    color: $link-color-hover;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $link-color-active;
+    text-decoration: underline;
+  }
+}
+
+a.link {
+  &--black {
+    color: $color-gray-dark;
+  }
+}
+
+b,
+strong {
+  font-weight: 600;
+}

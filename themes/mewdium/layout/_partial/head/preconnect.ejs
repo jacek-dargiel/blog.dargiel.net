@@ -1,0 +1,6 @@
+<% for(let preconnect_entry of theme.preconnect) { %>
+  <link rel="preconnect" href="<%- preconnect_entry %>">
+<% } %>
+<% for(let preconnect_entry of theme.preconnect) { %>
+  <link rel="dns-prefetch" href="<%- preconnect_entry %>">
+<% } %>

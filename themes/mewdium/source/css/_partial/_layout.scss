@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100vh;
+
+  @media (min-width: 50rem) {
+    flex-direction: row;
+  }
+}
+
+.sidebar {
+  order: 0;
+  min-width: $sidebar-width;
+}
+
+main {
+  order: 1;
+  padding: 1rem;
+
+  @media (min-width: 50rem) {
+    padding-top: 2.6rem;
+  }
+}
+
+.right-pad {
+  order: 2;
+  min-width: 16rem;
+  display: none;
+
+  @media (min-width: 85rem) {
+    display: block;
+  }
+}

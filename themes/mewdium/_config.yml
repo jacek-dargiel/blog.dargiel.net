@@ -1,0 +1,7 @@
+excerpt_link: Read more...
+
+node_sass:
+  includePaths: ['./node_modules/normalize.css']
+
+preconnect:
+  - //fonts.gstatic.com/

@@ -1,0 +1,25 @@
+<article
+  id="<%= post.slug %>"
+  class="post" 
+  itemscope 
+  itemprop="blogPost"
+>
+  <%- partial('header', { post, index }) %>
+  <% if (post.excerpt) { %>
+  <section class="post__excerpt">
+    <%- post.excerpt %>
+  </section>
+  <% } %>
+  <% if (post.excerpt && index) { %>
+  <p class="article-more-link">
+    <a href="<%- url_for(post.path) %>/#more">
+      Read more...
+    </a>
+  </p>
+  <% } %>
+  <% if (!post.excerpt || !index) { %>
+  <section class="post__more" id="more">
+    <%- post.more %>
+  </section>
+  <% } %>
+</article>

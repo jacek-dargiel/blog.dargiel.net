@@ -1,0 +1,21 @@
+$color-gray-light: #F5F5F5;
+$color-gray: #A9A9A9;
+$color-gray-dark: #454545;
+
+$color-blue: #0e83cd;
+
+$text-color: $color-gray-dark;
+$link-color: $color-blue;
+$link-color-hover: lighten($color-blue, 0.1);
+$link-color-active: lighten($color-blue, 0.1);
+$link-color-visited: #0b649d;
+
+$sidebar-bg: $color-gray-light;
+
+$sidebar-width: 16rem;
+
+$font-stack-body: 'Source Sans Pro', sans-serif;
+$font-stack-header: 'IBM Plex Sans', sans-serif;
+$font-stack-code: 'Source Code Pro', monospace;
+
+

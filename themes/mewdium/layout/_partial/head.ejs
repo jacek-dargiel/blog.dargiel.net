@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<%- partial('head/preconnect') %>
+<%- partial('head/title', { page }) %>
+<%- css('css/style') %>
+<%- open_graph({twitter_id: config.social.twitter.id}) %>
+<% if (page.canonical) { %>
+  <link rel="canonical" href="<%- page.canonical %>">
+<% } %>
+<link rel="icon" href="favicon.ico">
+<link rel="alternate" href="<%= url_for(theme.social.feed) %>" title="<%= config.title %>" type="application/atom+xml">
+<%- partial('head/google-analytics') %>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+<meta name="generator" content="Hexo <%- env.version %>">
+
+<% if (env.env === 'development') { %>
+  <script type="application/javascript">
+    console.log(<%- JSON.stringify({ config, env }) %>);
+  </script>
+<% } %>

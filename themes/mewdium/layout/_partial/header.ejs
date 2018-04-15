@@ -1,0 +1,17 @@
+<header>
+  <% if (index) { %>
+    <h2 itemprop="name" class="post-title">
+      <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+    </h2>
+  <% } else { %>
+    <h1 itemprop="name" class="post-title">
+      <%- post.title %>
+    </h1>
+  <% } %>
+  <div class="post-meta">
+    <time datetime="<%- moment(post.date).toISOString() %>"><%- time(post.date, 'LL') %>.</time>
+    <% if(moment(post.updated).startOf('day').valueOf() != moment(post.date).startOf('day').valueOf()) { %>
+      Updated: <%- time(post.updated, 'LL') %>
+    <% } %>
+  </div>
+</header>

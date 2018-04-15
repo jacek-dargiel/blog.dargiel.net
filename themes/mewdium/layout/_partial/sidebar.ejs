@@ -1,0 +1,47 @@
+<section class="bio">
+  <a href="/" class="avatar">
+    <img src="/images/avatar.jpg" alt="A picture of the author - Jacek Dargiel" />
+    <img src="/images/logo.svg" alt="" class="avatar-logo" />
+  </a>
+  <% if(is_post()) { %>
+    <div class="me">
+      <a href="/" class="link--black">
+        Jacek Dargiel
+      </a>
+    </div>
+  <% } else { %>
+    <h1 class="me">
+      <a href="/" class="link--black">
+        Jacek Dargiel
+      </a>
+    </h1>
+  <% } %>
+  <p>
+    JavaScript developer @ <a href="https://10clouds.com">10Clouds</a>. <br />
+    <a href="/about-me/">About me</a>.
+  </p>
+</section>
+<footer class="nav__footer">
+  <ul class="icons">
+    <li>
+      <a class="icon--rss" href="/atom.xml" title="The blogs Atom feed"></a>
+    </li>
+    <li>
+      <a class="icon--github" href="<%= config.social.github.url %>" title="My GitHub profile"></a>
+    </li>
+    <li>
+      <a class="icon--twitter" href="<%= config.social.twitter.url %>" title="My Twitter"></a>
+    </li>
+    <li>
+      <a class="icon--linkedin" href="<%= config.social.linkedin.url %>" title="My LinkedIn profile"></a>
+    </li>
+  </ul>
+  <p>
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">Feel free to share</a>.
+    Made with ❤ <br>
+    Powered by <a href="https://hexo.io/"><img src="/images/hexo.svg" alt="" class="hexo"> Hexo</a>.
+  </p>
+  <section class="cookies">
+    <p>This site <a href="/cookies-policy/">uses cookies</a>.</p>
+  </section>
+</footer>

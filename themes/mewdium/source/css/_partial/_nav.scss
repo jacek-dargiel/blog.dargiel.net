@@ -1,0 +1,113 @@
+.sidebar {
+  background: $sidebar-bg;
+  text-align: center;
+  padding: 3rem 1rem 0.25rem;
+  border-bottom: 1px solid $color-gray;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+  @media (min-width: 50rem) {
+    border-bottom: 0;
+  }
+
+  footer {
+    color: #a9a9a9;
+    font-size: 0.875rem;
+    
+    @media (min-width: 50rem) {
+      position: fixed;
+      bottom: 1rem;
+      width: $sidebar-width;
+    }
+
+    a {
+      color: #a9a9a9;
+      text-decoration: underline;
+      text-decoration-color: rgba(#a9a9a9, 0.5);
+    }
+
+    img.hexo {
+      vertical-align: text-bottom;
+    }
+  }
+
+  .icons {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-flex;
+
+    li {
+      @include square(1.75rem);
+      margin: 0.1rem;
+
+      a {
+        display: block;
+        @include square(100%);
+        background-size: cover;
+        transition: background-position 0.3s ease-in-out;
+
+        &:hover {
+          background-position: 0 -2.375rem;
+        }
+      }
+    }
+
+    .icon {
+      &--rss {
+        background-image: url('/images/feed.svg')
+      }
+      &--github {
+        background-image: url('/images/gh.svg')
+      }
+      &--twitter {
+        background-image: url('/images/twitter.svg')
+      }
+      &--linkedin {
+        background-image: url('/images/linkedin.svg')
+      }
+    }
+  }
+}
+
+.avatar {
+  display: inline-flex;
+  border: 1px solid $color-gray;
+  @include square(6.25rem);
+  position: relative;
+  
+  &>img {
+    max-width: 6.25rem;
+    max-height: 6.25rem;
+    width: auto;
+    height: auto;
+  }
+
+  .avatar-logo {
+    position: absolute;
+    @include square(2.25rem);
+    bottom: -0.5rem;
+    right: -0.5rem;
+    border: 1px solid $color-gray;
+  }
+}
+
+.bio {
+  @media (min-width: 50rem) {
+    position: fixed;
+    width: $sidebar-width;
+  }
+
+  .me {
+    @extend h1;
+    margin: 1rem 0 0 0;
+    font-size: 2rem;
+  }
+}
+
+.cookies {
+  p {
+    margin: 0;
+  }
+}
