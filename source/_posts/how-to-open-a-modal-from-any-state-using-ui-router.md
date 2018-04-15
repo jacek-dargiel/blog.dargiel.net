@@ -11,7 +11,7 @@ This post is a follow-up to a question that was asked on the [AngularJS Poland][
 
 The most simplified example goes like this:
 
-{% iframe http://embed.plnkr.co/yqcT6DY6KD5A94fSvGX9/app.js %}
+{% iframe //embed.plnkr.co/yqcT6DY6KD5A94fSvGX9/app.js %}
 
 In the above plunker we have two states defined -- a parent state for the view (`index`) and a child state for the modal (`index.terms`). The child state doesn't have a template nor controller as this isn't an actually usable state. The magic happens because UI-Router executes the `onEnter` callback. This callback has the dependency injection system build in, and can open the modal dialog using the `$modal` service.
 
@@ -19,7 +19,7 @@ This works fine, unfortunately, this didn't solve the initial problem -- opening
 
 ### Using the `$stateChangeStart` event
 
-{% iframe http://embed.plnkr.co/6dZfgb/app.js %}
+{% iframe //embed.plnkr.co/6dZfgb/app.js %}
 
 This approach involves defining a placeholder state for the modal (`terms` in the above plunker) which is a top-level state. Next we need to listen to the `$stateChangeStart` event. UI-Router broadcasts this event from the `$rootScope` using [Angulars event system][] every time a state is about to change. Among the arguments passed to the event listeners this event passes the `toState` object. We can use this to check which state is to be displayed, display the modal dialog using the `$modal` service, and cancel the state transition using `event.preventDefault()`. I would recommend listening to `$stateChangeStart` in the `run` block of the module -- this is far more elegant than using an application-wide controller encapsulating the entire app.
 
