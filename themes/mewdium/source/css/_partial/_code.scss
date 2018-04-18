@@ -1,0 +1,24 @@
+@import 'highlight/github';
+
+figure.highlight {
+  margin: 1em 0;
+  border-left: 2px solid $color-gray-light;
+  padding-left: 1rem;
+  font-size: 0.88rem;
+
+  
+  table {
+    width: 100%;
+  }
+  
+  pre {
+    margin: 0;
+  }
+  
+  .gutter {
+    color: $color-gray;
+  }
+  code {
+    background: transparent;
+  }
+}
